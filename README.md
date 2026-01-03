@@ -30,7 +30,7 @@ For security, sensitive information like the bot password is stored as environme
 
 - `BOT_PASSWORD`: The password for the bot's account on the Minecraft server.
 
-### Setting up Variables and Secrets in Cloudflare
+### Setting up Secrets in Github
 
 If deploying on your host with Environment Variables:
    - **Variable Name**: `BOT_HOST` (required, set as Secret)
