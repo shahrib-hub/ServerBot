@@ -32,12 +32,7 @@ For security, sensitive information like the bot password is stored as environme
 
 ### Setting up Variables and Secrets in Cloudflare
 
-If deploying on Cloudflare Workers or Pages:
-
-1. Go to your Cloudflare dashboard.
-2. Navigate to your Worker or Pages project.
-3. Go to the "Settings" tab.
-4. Under "Environment Variables", add the following (use "Secret" type for sensitive data):
+If deploying on your host with Environment Variables:
    - **Variable Name**: `BOT_HOST` (optional, default: 'yourserver.aternos.host')
    - **Variable Name**: `BOT_PORT` (optional, default: 64345)
    - **Variable Name**: `BOT_USERNAME` (optional, default: 'PixelForgeStudio')
