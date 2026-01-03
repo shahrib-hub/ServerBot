@@ -10,14 +10,14 @@ process.on('uncaughtException', (err) => {
 const mineflayer = require('mineflayer')
 
 const options = {
-  host: 'corgidor.aternos.host',
-  port: 64345,
-  username: 'Blockname',
-  auth: 'offline',
+  host: process.env.BOT_HOST || 'yourserver.aternos.host',
+  port: parseInt(process.env.BOT_PORT) || 64345,
+  username: process.env.BOT_USERNAME || 'PixelForgeStudio',
+  auth: process.env.BOT_AUTH || 'offline',
   version: '1.20.4'
 }
 
-const botPassword = 'MySecretPassword123'
+const botPassword = process.env.BOT_PASSWORD || 'MySecretPassword123'
 
 function createBot() {
   const bot = mineflayer.createBot(options)
@@ -50,36 +50,36 @@ function createBot() {
 }
 
 function humanBehavior(bot) {
-  const lookTime = Math.random() * 8000 + 2000 
+  const lookTime = Math.random() * 10000 + 10000 
   setTimeout(() => {
     bot.look(Math.random() * Math.PI * 2, (Math.random() - 0.5) * Math.PI)
-    humanBehavior(bot) 
+    humanBehavior(bot)
   }, lookTime)
 
-  const actionTime = Math.random() * 5000 + 3000
+  const actionTime = Math.random() * 15000 + 15000 
   setTimeout(() => {
     if (bot.entity && bot.entity.onGround) {
       const action = Math.floor(Math.random() * 4)
-      
+
       switch(action) {
         case 0:
           bot.setControlState('jump', true)
-          bot.setControlState('forward', true) 
-          setTimeout(() => { 
-            bot.setControlState('jump', false) 
+          bot.setControlState('forward', true)
+          setTimeout(() => {
+            bot.setControlState('jump', false)
             bot.setControlState('forward', false)
           }, 500)
           break;
-          
+
         case 1:
           bot.swingArm()
           break;
-          
-        case 2: 
+
+        case 2:
           bot.setControlState('sneak', true)
           setTimeout(() => bot.setControlState('sneak', false), 1000)
           break;
-          
+
         case 3:
            bot.setControlState('back', true)
            setTimeout(() => bot.setControlState('back', false), 500)
@@ -87,6 +87,14 @@ function humanBehavior(bot) {
       }
     }
   }, actionTime)
+
+  setTimeout(() => {
+    if (bot.entity && bot.entity.onGround) {
+      bot.setControlState('forward', true)
+      setTimeout(() => bot.setControlState('forward', false), 200)
+    }
+    setTimeout(() => humanBehavior(bot), 300000) 
+  }, 300000) 
 }
 
 createBot()
