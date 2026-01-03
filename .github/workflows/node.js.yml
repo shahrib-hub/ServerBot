@@ -10,6 +10,13 @@ jobs:
   run-bot:
     runs-on: ubuntu-latest
 
+    env:
+      BOT_HOST: ${{ secrets.BOT_HOST }}
+      BOT_PORT: ${{ secrets.BOT_PORT }}
+      BOT_USERNAME: ${{ secrets.BOT_USERNAME }}
+      BOT_AUTH: ${{ secrets.BOT_AUTH }}
+      BOT_PASSWORD: ${{ secrets.BOT_PASSWORD }}
+
     strategy:
       matrix:
         node-version: [22.x]
