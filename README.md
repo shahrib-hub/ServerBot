@@ -33,8 +33,8 @@ For security, sensitive information like the bot password is stored as environme
 ### Setting up Variables and Secrets in Cloudflare
 
 If deploying on your host with Environment Variables:
-   - **Variable Name**: `BOT_HOST` (optional, default: 'yourserver.aternos.host')
-   - **Variable Name**: `BOT_PORT` (optional, default: 64345)
+   - **Variable Name**: `BOT_HOST` (required, set as Secret)
+   - **Variable Name**: `BOT_PORT` (required, set as Secret)
    - **Variable Name**: `BOT_USERNAME` (optional, default: 'PixelForgeStudio')
    - **Variable Name**: `BOT_AUTH` (optional, default: 'offline')
    - **Variable Name**: `BOT_PASSWORD` (required, set as Secret)
