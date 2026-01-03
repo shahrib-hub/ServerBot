@@ -9,6 +9,7 @@ on:
 jobs:
   run-bot:
     runs-on: ubuntu-latest
+    environment: Production
 
     env:
       BOT_HOST: ${{ secrets.BOT_HOST }}
