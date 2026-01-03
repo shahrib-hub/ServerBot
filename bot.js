@@ -10,7 +10,7 @@ process.on('uncaughtException', (err) => {
 const mineflayer = require('mineflayer')
 
 const options = {
-  host: 'corgidor.aternos.host',
+  host: 'play.blockhorizon.fun',
   port: 64345,
   username: 'Blockname',
   auth: 'offline',
