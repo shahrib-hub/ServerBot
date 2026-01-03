@@ -10,8 +10,8 @@ process.on('uncaughtException', (err) => {
 const mineflayer = require('mineflayer')
 
 const options = {
-  host: process.env.BOT_HOST || 'play.faltumc.xyz',
-  port: parseInt(process.env.BOT_PORT) || 19132,
+  host: process.env.BOT_HOST || 'play.blockhorizon.fun',
+  port: parseInt(process.env.BOT_PORT) || 64345,
   username: process.env.BOT_USERNAME || 'PixelForgeStudio',
   auth: process.env.BOT_AUTH || 'offline',
   version: '1.20.4'
