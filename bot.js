@@ -12,7 +12,7 @@ const mineflayer = require('mineflayer')
 const options = {
   host: process.env.BOT_HOST || '51.77.85.124',
   port: parseInt(process.env.BOT_PORT) || 51683,
-  username: process.env.BOT_USERNAME || 'MoonveilBot',
+  username: process.env.BOT_USERNAME || 'MoonveilWatchdog',
   auth: process.env.BOT_AUTH || 'offline',
   version: '1.20.4'
 }
