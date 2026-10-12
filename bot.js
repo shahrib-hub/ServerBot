@@ -17,7 +17,7 @@ const options = {
   version: '1.20.4'
 }
 
-const botPassword = process.env.BOT_PASSWORD || 'MySecretPassword123'
+const botPassword = process.env.BOT_PASSWORD || 'Moonveilll78600'
 
 function createBot() {
   const bot = mineflayer.createBot(options)
