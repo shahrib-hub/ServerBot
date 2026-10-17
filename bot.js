@@ -10,7 +10,7 @@ process.on('uncaughtException', (err) => {
 const mineflayer = require('mineflayer')
 
 const options = {
-  host: process.env.BOT_HOST || '5.83.132.171',
+  host: process.env.BOT_HOST || '91.197.55.210',
   port: parseInt(process.env.BOT_PORT) || 26446,
   username: process.env.BOT_USERNAME || 'MoonveilWatchdog',
   auth: process.env.BOT_AUTH || 'offline',
